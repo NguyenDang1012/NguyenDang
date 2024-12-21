@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám phá mùa đông ở Hà Nội</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*css chia thanh bar menu*/
+        .more-content {
+            display: none;
+        }
+
+        button {
+            font-size: 12px;         /* Làm chữ nhỏ */
+            color: rgba(0, 0, 0, 0.5);  /* Làm chữ mờ */
+            text-decoration: underline;  /* Gạch chân chữ */
+            background: none;        /* Loại bỏ nền */
+            border: none;            /* Loại bỏ viền */
+            cursor: pointer;        /* Thêm hiệu ứng con trỏ chuột khi hover */
+            padding: 0;              /* Loại bỏ khoảng cách bên trong nút */
+        }
+
+        button:hover {
+            color: rgba(0, 0, 0, 0.8);  /* Đổi màu của nút khi người dùng di chuột lên nó (hover effect) */
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffc776; /* Màu vàng */
+        }
+
+        /* Nút quay về đầu trang */
+        #backToTop {
+            position: fixed; /* Cố định vị trí trên màn hình */
+            bottom: 20px; /* Cách mép dưới 20px */
+            right: 20px; /* Cách mép phải 20px */
+            background-color: #007BFF; /* Màu nền */
+            color: #fff; /* Màu chữ */
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: none; /* Ẩn ban đầu */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #backToTop:hover {
+            background-color: #0056b3; /* Màu khi di chuột vào */
+        }
+
+        /*css để chia khoảng cách khối div của 2 ảnh*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .image-pair {
+            display: flex; /* Dùng Flexbox để các ảnh nằm ngang */
+            justify-content: space-between; /* Căn các ảnh cách đều nhau */
+            gap: 20px; /* Tạo khoảng cách giữa các ảnh */
+            margin-bottom: 20px;
+        }
+
+        .image-pair img {
+            width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử cha */
+            height: auto;
+            object-fit: cover; /* Giữ tỷ lệ ảnh */
+            border-radius: 8px; /* Bo tròn góc ảnh */
+        }
+
+        .image-pair .image {
+            flex: 1; /* 2 ảnh chia đều không gian */
+        }
+    </style>
+
+    <!-- Nút quay về đầu trang -->
+<button id="backToTop" title="Quay về đầu trang">▲ Lên đầu</button>
+
+<script>
+    // Lấy phần tử nút
+    const backToTopButton = document.getElementById("backToTop");
+
+    // Hiển thị nút khi cuộn xuống 200px
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Cuộn mượt về đầu trang khi click
+    backToTopButton.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Hiệu ứng cuộn mượt
+        });
+    };
+</script>
+</head>
+<body>
+    <header class="bg-dark text-white text-center p-4">
+        <h1>Khám phá mùa đông ở Hà Nội</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Trang Chủ</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="spring.html">Mùa Xuân</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="summer.html">Mùa Hè</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="autumn.html">Mùa Thu</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="winter.html">Mùa Đông</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <h2>Mùa đông Hà Nội chưa bao giờ hết gây thương nhớ</h2>
+        <br>
+        <br>
+        <h6>Hà Nội đang bước vào những ngày rét ngọt ngào. Dù lạnh tê tái nhưng nếu không bước chân ra đường vào những ngày này, bạn sẽ thấy hối tiếc bởi rất nhiều thứ đáng yêu sẽ khiến bạn thấy lòng ấm áp hơn rất nhiều..</h6>
+        <br>
+        <br>
+        <br>
+        <p>Từ đầu mùa đến giờ, dân tình không biết bao lần lo lắng sợ rằng năm nay chẳng có một mùa đông đúng nghĩa. Ngay cả khi đến giữa tháng 12, dù đã qua vài đợt trời chuyển gió, nhưng thời tiết chỉ mới lạnh ở độ mặc một chiếc áo khoác mỏng là đủ. Cho đến mấy hôm nay, khi nhiệt độ đã xuống tới tận 10 - 13 độ C, bao nhiêu áo phao, áo dạ đều lôi ra hết rồi phải quàng thêm chiếc khăn mới đủ ấm, thì ai cũng phải thốt lên rằng "đây mới chính là mùa đông của Hà Nội".</p>
+        <div class="container">
+            <!-- Khối chứa 2 ảnh -->
+            <div class="image-pair">
+                <div class="image">
+                    <img src="images/muadong1.jpg" alt="Ảnh 1">
+                </div>
+                <div class="image">
+                    <img src="images/muadonghanoi.jpeg" alt="Ảnh 2">
+                </div>
+            </div>
+        </div>
+        <p>Hà Nội - Mùa đông, đó có lẽ là một trong những khoảng thời gian đặc biệt nhất trong năm với những đặc trưng không lẫn đi đâu được. Cái lạnh của mùa đông tháng 12 ngọt hanh hao, kèm theo những cơn gió mang không khí tê tái xộc vào người, cảm tưởng như bao nhiêu lớp áo cũng không đủ che chắn. Có người đã miêu tả một cách văn vẻ nhưng khá chính xác: không ồn ào náo nhiệt như mùa Hè, không nồng nàn say đắm như mùa Thu, không tươi trẻ đầy sức sống như mùa Xuân, mùa Đông Hà Nội mang chút lạnh lùng nghiêm nghị nhưng cũng không kém phần duyên dáng.</p>
+        <div class="image-pair">
+            <div class="image">
+                <img src="images/muadonghanoi4.jpg" alt="Ảnh 3">
+            </div>
+            <div class="image">
+                <img src="images/muadonghanoi5.jpg" alt="Ảnh 4">
+            </div>
+        </div>
+    <p>Những ngày thế này mà bước ra đường thì cũng ngại thật đấy, nhưng thích thú lạ! Ngại vì rét buốt len lỏi qua từng kẽ tay, ngấm vào da thịt, chỉ muốn phi xe thật nhanh trở về nhà, nằm cuộn tròn trong chiếc chăn to sụ. Nhưng nếu cứ sợ lạnh mãi thì sẽ chẳng bao giờ cảm nhận hết được thú vui của những ngày rét mướt, chẳng thể thấy được Hà Nội trong những ngày cuối năm vẫn rộn ràng nhưng nhịp sống lại âm trầm và đầy bình yên.</p>
+    <br>
+    <img src="images/muadong2.jpg" alt="Mùa đông Hà Nội" class="img-fluid mb-3" width="700" height="auto">
+    <br>
+    <br>
+    <p>Dạo quanh các ngõ ngách lại thấy những góc đỏ ửng của những cuốn lịch vạn niên, thỉnh thoảng có cành đào vụt qua trước mắt khiến người ta lại giật mình xốn xang "mùa rét ngọt" đương gọi xuân về. Cứ thế, từ năm này qua năm khác, người ta nhớ nhung đông Hà Nội bởi những điều nhỏ bé, giản đơn như thế.</p>
+    <br>
+    <p>Rồi những khoảng nắng hiếm hoi của mùa đông bất ngờ xuất hiện mang đến cho Hà Nội một nét duyên dáng rất riêng mà không một nơi nào có được. Nắng đông không gay gắt mà chỉ là những tia ấm dịu dàng làm khung cảnh của Hà Nội trở nên đẹp diệu kỳ. Nắng biến ngày rét buốt ảm đạm như bừng lên đầy sức sống khiến người ta vội vàng lên phố. Thế nhưng thay vì hối hả vội vã lao đi giữa dòng người đông đúc, phố mùa đông chậm rãi mang đến cho mọi người những giây phút thảnh thơi.</p>
+    <div class="image-pair">
+        <div class="image">
+            <img src="images/hanoitet.jpg" alt="Ảnh 3">
+        </div>
+        <div class="image">
+            <img src="images/hanoitet2.jpeg" alt="Ảnh 4">
+        </div>
+    </div>
+    </main>
+
+    
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2024 Blog Khí Hậu Hà Nội</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

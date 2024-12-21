@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám phá mùa hè ở Hà Nội</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .more-content {
+            display: none;
+        }
+
+        button {
+            font-size: 12px;         /* Làm chữ nhỏ */
+            color: rgba(0, 0, 0, 0.5);  /* Làm chữ mờ */
+            text-decoration: underline;  /* Gạch chân chữ */
+            background: none;        /* Loại bỏ nền */
+            border: none;            /* Loại bỏ viền */
+            cursor: pointer;        /* Thêm hiệu ứng con trỏ chuột khi hover */
+            padding: 0;              /* Loại bỏ khoảng cách bên trong nút */
+        }
+
+        button:hover {
+            color: rgba(0, 0, 0, 0.8);  /* Đổi màu của nút khi người dùng di chuột lên nó (hover effect) */
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffc776; /* Màu vàng */
+        }
+
+        /*css để chia khoảng cách khối div của 2 ảnh*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .image-pair {
+            display: flex; /* Dùng Flexbox để các ảnh nằm ngang */
+            justify-content: space-between; /* Căn các ảnh cách đều nhau */
+            gap: 20px; /* Tạo khoảng cách giữa các ảnh */
+            margin-bottom: 20px;
+        }
+
+        .image-pair img {
+            width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử cha */
+            height: auto;
+            object-fit: cover; /* Giữ tỷ lệ ảnh */
+            border-radius: 8px; /* Bo tròn góc ảnh */
+        }
+
+        .image-pair .image {
+            flex: 1; /* 2 ảnh chia đều không gian */
+        }
+
+        /* Nút quay về đầu trang */
+        #backToTop {
+            position: fixed; /* Cố định vị trí trên màn hình */
+            bottom: 20px; /* Cách mép dưới 20px */
+            right: 20px; /* Cách mép phải 20px */
+            background-color: #007BFF; /* Màu nền */
+            color: #fff; /* Màu chữ */
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: none; /* Ẩn ban đầu */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #backToTop:hover {
+            background-color: #0056b3; /* Màu khi di chuột vào */
+        }
+    </style>
+
+    <!-- Nút quay về đầu trang -->
+<button id="backToTop" title="Quay về đầu trang">▲ Lên đầu</button>
+
+<script>
+    // Lấy phần tử nút
+    const backToTopButton = document.getElementById("backToTop");
+
+    // Hiển thị nút khi cuộn xuống 200px
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Cuộn mượt về đầu trang khi click
+    backToTopButton.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Hiệu ứng cuộn mượt
+        });
+    };
+</script>
+</head>
+<body>
+    <header class="bg-dark text-white text-center p-4">
+        <h1>Khám phá Mùa Hè ở Hà Nội</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Trang Chủ</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="spring.html">Mùa Xuân</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="summer.html">Mùa Hè</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="autumn.html">Mùa Thu</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="winter.html">Mùa Đông</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <h2>Hà Nội vào hè như bức tranh rực rỡ </h2>
+        <br>
+        <p>Mùa Hè ở Việt Nam thường kéo dài từ tháng 4 đến tháng 7, được cho là khó dự đoán nhất.
+           Có thể oi bức vào buổi sáng và buổi trưa khi nhiệt độ ngoài trời lên đến hơn 40 độ C. 
+           Tuy nhiên, vào buổi tối bầu trời chuyển sang màu xám và chỉ sau vài phút, mưa lớn có thể đổ xuống.</p>
+           <div class="container">
+            <!-- Khối chứa 2 ảnh -->
+            <div class="image-pair">
+                <div class="image">
+                    <img src="images/6.webp" alt="Ảnh 3">
+                </div>
+                <div class="image">
+                    <img src="images/hanoi3.jpg" alt="Ảnh 4">
+                </div>
+            </div>
+        </div>
+        <p>Mùa Hè ở Hà Nội thường nắng nóng, khô với nhiệt độ có thể đạt ngưỡng đến 42 độ C. 
+           Thời gian nắng nóng kéo dài, nhiều cơn mưa dông, mưa to. 
+           Thế nhưng bất chấp điều kiện thời tiết khó chịu, Hà Nội vẫn là một trong những thời điểm được khách du lịch yêu thích ghé thăm nhiều nhất. 
+           Nhờ điều kiện thuận lợi nên mùa Hè nhiều loại cây đua nhau ra hoa, tạo nên một bức tranh Hà Nội đầy màu sắc.</p>
+        <P>Vào mùa Hè, du khách đến Hà Nội cũng có thể chiêm ngưỡng vẻ đẹp của các loài hoa khác từ những giỏ hoa loa kèn chất
+           đầy gánh hàng rong dọc phố đến cánh đồng sen Hồ Tây thơm ngát... 
+           Chính sự kết hợp giữa ánh nắng vàng phản chiếu qua kẽ lá và sắc rực rỡ của những loài hoa này đã tạo nên vẻ đẹp bình dị của Hà Nội vào Hè.</P>
+        <P>Đến với Hà Nội vào mùa Hè, du khách có thể bắt gặp sắc đỏ rực rỡ của hoa phượng trên nhiều tuyến phố như:
+           Láng, Thanh Niên, Phan Đình Phùng hay quanh Hồ Tây, Hồ Hoàn Kiếm,... 
+           Phượng vĩ nở từ tháng 4 đến tháng 6 cho tới khi sắp mùa tựu trường mới tàn. 
+           Phượng đỏ đan xen cùng tiếng ve râm ran kêu luôn khiến du khách nhớ về những kỷ niệm đẹp thời học sinh. 
+           Bằng lăng tím nở hoa, tàn úa cả một góc trời khiến nhiều du khách yêu thích chụp ảnh. </P>
+           <div class="container">
+            <!-- Khối chứa 2 ảnh -->
+            <div class="image-pair">
+                <div class="image">
+                    <img src="images/muahehanoi.jpg" alt="Ảnh 3">
+                </div>
+                <div class="image">
+                    <img src="images/8.jpg" alt="Ảnh 44">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2024 Blog Khí Hậu Hà Nội</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

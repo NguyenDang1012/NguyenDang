@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám phá Mùa Xuân ở Hà Nội</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .more-content {
+            display: none;
+        }
+
+        button {
+            font-size: 12px;         /* Làm chữ nhỏ */
+            color: rgba(0, 0, 0, 0.5);  /* Làm chữ mờ */
+            text-decoration: underline;  /* Gạch chân chữ */
+            background: none;        /* Loại bỏ nền */
+            border: none;            /* Loại bỏ viền */
+            cursor: pointer;        /* Thêm hiệu ứng con trỏ chuột khi hover */
+            padding: 0;              /* Loại bỏ khoảng cách bên trong nút */
+        }
+
+        button:hover {
+            color: rgba(0, 0, 0, 0.8);  /* Đổi màu của nút khi người dùng di chuột lên nó (hover effect) */
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffc776; /* Màu vàng */
+        }
+
+        /* Nút quay về đầu trang */
+        #backToTop {
+            position: fixed; /* Cố định vị trí trên màn hình */
+            bottom: 20px; /* Cách mép dưới 20px */
+            right: 20px; /* Cách mép phải 20px */
+            background-color: #007BFF; /* Màu nền */
+            color: #fff; /* Màu chữ */
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: none; /* Ẩn ban đầu */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #backToTop:hover {
+            background-color: #0056b3; /* Màu khi di chuột vào */
+        }
+    </style>
+
+    <!-- Nút quay về đầu trang -->
+<button id="backToTop" title="Quay về đầu trang">▲ Lên đầu</button>
+
+<script>
+    // Lấy phần tử nút
+    const backToTopButton = document.getElementById("backToTop");
+    
+    // Hiển thị nút khi cuộn xuống 200px
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+    
+    // Cuộn mượt về đầu trang khi click
+    backToTopButton.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Hiệu ứng cuộn mượt
+        });
+    };
+</script>    
+</head>
+<body>
+    <header class="bg-dark text-white text-center p-4">
+        <h1>Khám phá Mùa Xuân ở Hà Nội</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Trang Chủ</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="spring.html">Mùa Xuân</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="summer.html">Mùa Hè</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="autumn.html">Mùa Thu</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="winter.html">Mùa Đông</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <h2>Những nét đặc trưng say đắm lòng người của mùa xuân Hà Nội</h2>
+        <br>
+        <p>Đặc điểm khí hậu của Hà Nội vào mùa Xuân</p>
+        <p>khí hậu Hà Nội rất dễ chịu, có chút se lạnh nhưng không quá rét như mùa đông, vẫn sẽ có những cơn mưa phảng phất.
+            Đây là thời điểm cây cối đâm chồi nảy lộc, trăm hoa đua nở sau một mà đông giá rét.
+             Mùa xuân được ví von như là mùa của sự đoàn viên, sung túc, hạnh phúc và ấm no.</p>
+        <img src="images/1.jpg" alt="Mùa xuân Hà Nội" class="img-fluid mb-3" width="900" height="auto">
+        <p>Ngoài ra, mùa xuân cũng được coi là thời điểm lý tưởng cho hành trình du lịch Hà Nội của bạn,
+            khí hậu Hà Nội cũng không quá lạnh để bạn vi vu phố phường. Ghé Thủ đô dịp đầu năm,
+            bạn sẽ được ngắm những loài hoa đặc trưng như hoa ban, hoa sưa, hay thăm thú những con phố được trang trí rực rỡ chuẩn bị đón Tết.
+            Không chỉ vậy, thời điểm này, Hà Nội còn có những lễ hội truyền thống vô cùng hấp dẫn như lễ hội Đống Đa,
+            lễ hội đấu vật Liễu Đôi, lễ hội Gióng và lễ hội đền Đồng Cổ Loa…</p>
+        <img src="images/xuanhanoi.jpg" alt="Mùa xuân Hà Nội" class="img-fluid mb-3" width="900" height="auto">    
+        <p>Xuân về, đâu đó một góc trời, đường phố Hà Nội bỗng trở nên thơ mộng hơn bởi sắc màu của hoa ban tím.
+            Thời tiết Hà Nội mùa xuân ẩm ương, nồm và thất thường như con gái vậy.
+            Thế nhưng, dù có đang hờn giận chuyện gì, khi những bông ban đua nở vỗ về, an ủi, Hà Nội liền trở thành một thiếu nữ dịu dàng biết bao.</p>\
+        <img src="images/xuanhanoi1.jpg" alt="Mùa xuân Hà Nội" class="img-fluid mb-3" width="900" height="auto">
+        <p>Không chỉ là mùa của muôn vàn những sắc hoa, mùa xuân Hà Nội còn là mùa của rất nhiều lễ hội.
+           Hàng năm, cứ độ xuân về, người dân cả nước lại náo nức kéo về Thủ đô để tham gia những lễ hội nổi tiếng như Lễ hội chùa Hương,
+           Hội gò Đống Đa, Hội đền Sóc, Lễ hội Cổ Loa, Lễ hội đền Hai Bà Trưng, Lễ hội Tản Viên Sơn Thánh...
+           Trong đó, thu hút nhiều người từ mọi miền Tổ quốc tham gia nhất chính là Lễ hội chùa Hương,
+           được tổ chức từ mùng 6 tháng giêng hàng năm, diễn ra trên địa bàn xã Hương Sơn, huyện Mỹ Đức, Hà Nội.</p>
+        <img src="images/lehoihanoi1.jpg" alt="Mùa xuân Hà Nội" class="img-fluid mb-3" width="900" height="auto">
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2024 Blog Khí Hậu Hà Nội</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

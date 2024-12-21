@@ -1,0 +1,46 @@
+/* Định dạng chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Định dạng cho các thẻ section */
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng cho card */
+.card {
+    border: none;
+}
+
+/* Định dạng footer */
+footer {
+    margin-top: 20px;
+}
